@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Sign Up</h1>
+<!-- register_view에서 다 처리할 수 있게 만듦-->
+<form action="{% url 'signup' %}" method="post">
+  {%csrf_token%} {{form.as_p}}
+  <button type="submit">submit</button>
+</form>
+{% endblock %}
